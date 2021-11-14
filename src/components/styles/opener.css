@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+
+.main {
+  background-color: #d44;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: url("../../assets/img/main-bg.png");
+  background-position: center;
+}
+
+.fill {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  opacity: 0;
+  display: none;
+  background: url("../../assets/img/trees-bg.png") no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 0%;
+  }
+}
+
+.merrywrap {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  display: contents;
+}
+
+.giftbox {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 50%;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes vibrate-3 {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  30% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, -2px);
+  }
+  70% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+  90% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cover {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 25%;
+}
+
+.giftbox .cover > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+}
+.giftbox > div:after,
+.giftbox > div:before {
+  position: absolute;
+  content: "";
+  top: 0;
+}
+.giftbox .cover::before {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  width: 50px;
+  transform: translateX(-50%);
+  background: #fdc56d;
+}
+.giftbox .cover > div:before {
+  transform: translateX(-45%) skewY(40deg);
+}
+.giftbox .cover > div:after {
+  transform: translateX(45%) skewY(-40deg);
+}
+.giftbox .cover > div:before,
+.giftbox .cover > div:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: inset 0 0 0 15px #fdc56d;
+  border-radius: 30px;
+  transform-origin: 50% 100%;
+}
+
+/* Box bottom */
+.giftbox > div {
+  background: #34495e;
+  position: absolute;
+}
+.giftbox .box {
+  right: 5%;
+  left: 5%;
+  height: 80%;
+  bottom: 0;
+}
+.giftbox .box:before {
+  width: 50px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fdc56d;
+}
+.giftbox .box:after {
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.giftbox > div:after,
+.giftbox > div:before {
+  position: absolute;
+  content: "";
+  top: 0;
+}
+.giftbox:after {
+  font-family: "Kaushan Script", cursive;
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  content: "Click Me!";
+  left: 0;
+  bottom: 0;
+  font-size: 24px;
+  text-align: center;
+  transform: rotate(-20deg);
+  transform-origin: 0 0;
+}

@@ -1,0 +1,43 @@
+.click-label {
+  text-align: center;
+  height: fit-content;
+  position: relative;
+  top: 50%;
+  transform: translateY(-150%);
+  color: #fff;
+  font-size: 2em;
+  font-family: "Gluten", cursive;
+}
+.fad {
+  color: #fff;
+  font-size: 2em;
+  animation: jump 0.5s infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .click-label {
+    font-size: 1.5em;
+  }
+}
